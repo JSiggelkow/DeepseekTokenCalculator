@@ -1,0 +1,9 @@
+<div>
+  <p-fileupload mode="basic" name="file" chooseIcon="pi pi-upload"
+                auto="true"
+                customUpload="true"
+                (uploadHandler)="uploadFile($event)"
+  >
+  </p-fileupload>
+  <span>{{ calculatedTokens }}</span>
+</div>
