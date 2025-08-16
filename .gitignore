@@ -8,3 +8,5 @@ __pycache__/
 
 # Node Package Manager
 node_modules
+package.json
+package-lock.json
