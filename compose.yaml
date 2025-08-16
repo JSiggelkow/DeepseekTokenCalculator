@@ -1,0 +1,8 @@
+name: token-calculator
+services:
+  api:
+    container_name: api
+    build:
+      context: ./api
+    ports:
+      - "8000:8000"

@@ -19,7 +19,7 @@ def normalize_ws(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
-@app.post("/tokens")
+@app.post("/api/tokens")
 async def tokens(file: UploadFile = File(...)):
     if not file.filename.lower().endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Invalid file type")
