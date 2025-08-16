@@ -6,3 +6,10 @@ services:
       context: ./api
     ports:
       - "8000:8000"
+
+  web:
+    container_name: web
+    build:
+      context: ./web
+    ports:
+      - "4200:4200"

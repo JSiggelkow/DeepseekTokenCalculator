@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import {FileUpload, FileUploadEvent, FileUploadHandlerEvent} from 'primeng/fileupload';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {environment} from '../../environments/environment';
 
 interface TokenResponse {
   model: string;
@@ -12,6 +13,7 @@ interface TokenResponse {
 
 @Component({
   selector: 'app-token-calculator',
+  standalone: true,
   imports: [
     FileUpload
   ],
@@ -21,7 +23,7 @@ interface TokenResponse {
 export class TokenCalculator {
 
    private readonly http = inject(HttpClient);
-   private readonly uploadUrl = 'http://localhost:4200/api/tokens';
+   private readonly uploadUrl = '/api/tokens';
 
    calculatedTokens: number = 0;
 
