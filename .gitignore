@@ -1,6 +1,10 @@
 # IDE
 .idea
+.vscode
 
 # Python Virtual Environment
 .venv
 __pycache__/
+
+# Node Package Manager
+node_modules
